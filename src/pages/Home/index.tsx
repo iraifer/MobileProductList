@@ -80,8 +80,8 @@ export default function HomePage() {
                 source={require('../../../assets/final.gif')}
             />
 
-            <Input label="E-mail" value={login} onChange={setLogin} />
-            <Input label="Senha" value={password} onChange={setPassword}  />
+            <Input label="E-mail" value={login} onChange={setLogin} secure={false}/>
+            <Input label="Senha" value={password} onChange={setPassword} secure={true} />
 
                 <View style={styles.container}>
                     <TouchableOpacity

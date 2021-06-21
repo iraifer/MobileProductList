@@ -57,11 +57,11 @@ export default function UserPage() {
 
     return (
         <View style={styles.container}>
-            <InputTextField label="Nome" value={name} onChange={setName} />
-            <InputTextField label="Age"  value={age} onChange={setAge} />
-            <InputTextField label="Address" value={address} onChange={setAddress} />
-            <InputTextField label="Email" value={email} onChange={setEmail} />
-            <InputTextField label="User Password" value={userPassword} onChange={setuserPassword} />
+            <InputTextField label="Nome" value={name} onChange={setName} secure={false}/>
+            <InputTextField label="Age"  value={age} onChange={setAge} secure={false}/>
+            <InputTextField label="Address" value={address} onChange={setAddress} secure={false}/>
+            <InputTextField label="Email" value={email} onChange={setEmail} secure={false}/>
+            <InputTextField label="User Password" value={userPassword} onChange={setuserPassword} secure={true}/>
 
             <Button title='Salvar' onPress={handleSave} />
         </View>
