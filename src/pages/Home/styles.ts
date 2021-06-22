@@ -27,7 +27,7 @@ export default StyleSheet.create({
     },
 
     logo: {
-        height: Dimensions.get('window').width -260,
+        height: Dimensions.get('window').width -20,
         width: Dimensions.get('window').width,
         marginBottom: 10,
     },
@@ -49,5 +49,12 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         alignSelf: 'center',
         textTransform: 'uppercase',
+    },
+
+    avoidView: {
+        flex: 1,
+        alignItems: 'center',
+        alignContent: 'center',
+        justifyContent: 'center',
     },
 });

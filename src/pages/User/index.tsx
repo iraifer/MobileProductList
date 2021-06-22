@@ -27,7 +27,7 @@ export default function UserPage() {
             const user = { address, age, email, name, userPassword } as User;
             actions.save(user)
             .then((result) => {
-                console.log(result);
+
                 if (!result) {
                     Alert.alert(
                         'User Information',

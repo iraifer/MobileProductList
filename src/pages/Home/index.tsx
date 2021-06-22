@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image, View, ActivityIndicator, Alert } from 'react-native';
+import { Text, Image, View, Alert, KeyboardAvoidingView } from 'react-native';
 import Input from '../../components/InputTextField';
 import { useNavigation, useRoute } from '@react-navigation/core';
 import { Ionicons } from '@expo/vector-icons';
@@ -61,7 +61,6 @@ export default function HomePage() {
                 navigation.navigate('Products' );
             })
             .catch((error) => {
-                console.error(error);
                 Alert.alert(
                     'Error',
                     'Authentication error.\nPlease, contact the administrator.'
@@ -74,6 +73,7 @@ export default function HomePage() {
     }
 
     return (
+        <KeyboardAvoidingView behavior="position" style={styles.avoidView}>
         <View style={styles.container}>
             <Image
                 style={styles.logo}
@@ -99,6 +99,7 @@ export default function HomePage() {
                     </TouchableOpacity>
                 </View>
         </View>
+        </KeyboardAvoidingView>
     );
 
 }

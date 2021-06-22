@@ -17,7 +17,6 @@ export async function authAction(auth: Auth) : Promise<any> {
         const res = await authService.post('/user/login', auth);
         return res.data;
     } catch (error) {
-        console.error('Error during authentication: ', error);
         return null;
     }
     
